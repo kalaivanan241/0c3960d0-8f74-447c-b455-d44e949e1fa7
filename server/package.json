@@ -1,0 +1,30 @@
+{
+  "name": "apmd-challenge-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon --watch 'src/**/*.ts' --exec npx tsx src/index.ts",
+    "db:generate": "drizzle-kit generate:sqlite --schema=src/db/schema.ts",
+    "db:migrate": "npx tsx ./src/migrate.ts",
+    "db:studio": "npx drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "better-sqlite3": "^9.5.0",
+    "drizzle-orm": "^0.30.8",
+    "graphql": "^16.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "csv-parser": "^3.0.0",
+    "drizzle-kit": "^0.20.16",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
